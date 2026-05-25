@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+chromadb
+sentence-transformers
+pandas
+google-generativeai
+transformers
+torch

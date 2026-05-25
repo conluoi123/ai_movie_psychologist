@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Movie Psychologist</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>AI Movie Psychologist <i class="fa-solid fa-brain"></i></h1>
+            <p class="subtitle">Hãy kể tôi nghe tâm trạng của bạn, tôi sẽ kê cho bạn một "liều thuốc" điện ảnh.</p>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <div class="glass-panel input-section">
+                <div class="input-group">
+                    <label for="user-input">Hôm nay bạn cảm thấy thế nào?</label>
+                    <textarea id="user-input" placeholder="Ví dụ: Dạo này công việc áp lực quá, sếp mắng suốt ngày. Mình muốn xem một bộ phim gì đó chữa lành, có thiên nhiên yên bình để quên đi mệt mỏi..."></textarea>
+                </div>
+                
+                <div class="controls">
+                    <div class="rating-control">
+                        <label for="min-rating">Điểm IMDB tối thiểu: <span id="rating-val">6.0</span> ⭐️</label>
+                        <input type="range" id="min-rating" min="5.0" max="9.0" step="0.5" value="6.0">
+                    </div>
+                    <button id="analyze-btn" class="primary-btn">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Phân tích Tâm lý
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="loading-state hidden">
+                <div class="spinner"></div>
+                <p id="loading-text">Bác sĩ AI đang bắt mạch...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="results-section hidden">
+                
+                <!-- Tâm lý học Report -->
+                <div class="glass-panel psych-report">
+                    <div class="report-header">
+                        <h2><i class="fa-solid fa-stethoscope"></i> Hồ sơ Tâm lý & Lời khuyên</h2>
+                        <div class="badges">
+                            <span id="badge-sentiment" class="badge">Mood: N/A</span>
+                        </div>
+                    </div>
+                    <div id="psych-text" class="report-content typing-effect">
+                        <!-- AI text goes here -->
+                    </div>
+                </div>
+
+                <!-- Phim Đề cử -->
+                <h3 class="section-title">"Đơn thuốc" Điện ảnh dành cho bạn</h3>
+                <div id="movie-grid" class="movie-grid">
+                    <!-- Movie cards go here -->
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Nguyễn Kim Quốc</p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

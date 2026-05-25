@@ -37,11 +37,15 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
-# Data
+# Data & Models (Nặng)
 backend/data/chromadb/
+backend/data/models/
+backend/data/raw/
+backend/data/processed/
 *.csv
 *.parquet
 *.sqlite3
 *.db
 *.tsv
-
+*.safetensors
+*.bin

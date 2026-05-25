@@ -1,0 +1,24 @@
+# Sử dụng image Python chuẩn và nhẹ
+FROM python:3.11-slim
+
+# Thiết lập thư mục làm việc trong Docker
+WORKDIR /app
+
+# Copy file requirements và cài đặt thư viện
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy toàn bộ mã nguồn vào Docker
+# (Bao gồm cả backend, frontend, chromadb và model)
+COPY . .
+
+# Hugging Face Spaces yêu cầu mở cổng 7860
+EXPOSE 7860
+
+# Thiết lập biến môi trường
+ENV PYTHONUNBUFFERED=1
+# Đọc biến môi trường từ Secret của Hugging Face (sẽ cấu hình trên Web sau)
+# ENV GEMINI_API_KEY="..."
+
+# Lệnh khởi chạy server FastAPI (phải trỏ đúng đường dẫn backend.app.main)
+CMD ["uvicorn", "backend.app.main:app", "--host", "0.0.0.0", "--port", "7860"]
