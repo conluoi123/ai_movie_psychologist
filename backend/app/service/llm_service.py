@@ -16,8 +16,9 @@ class PsychologistLLM:
             
         genai.configure(api_key=api_key)
         
-        # 2. Chọn model. Ta dùng bản 2.5 Flash vì nó phản hồi gần như tức thì và siêu rẻ.
-        self.model = genai.GenerativeModel('gemini-2.5-flash')
+        # 2. Chọn model. Nhìn vào bảng Dashboard của bạn, ta sẽ dùng 'gemini-3.1-flash-lite'
+        # Nó cho phép 500 lượt/ngày và 15 lượt/phút. Quá ngon lành!
+        self.model = genai.GenerativeModel('gemini-3.1-flash-lite')
 
     def translate_to_search_query(self, user_text: str):
         """

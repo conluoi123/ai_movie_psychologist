@@ -49,3 +49,5 @@ backend/data/processed/
 *.tsv
 *.safetensors
 *.bin
+
+ai-movie-psychologist

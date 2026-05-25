@@ -20,5 +20,8 @@ ENV PYTHONUNBUFFERED=1
 # Đọc biến môi trường từ Secret của Hugging Face (sẽ cấu hình trên Web sau)
 # ENV GEMINI_API_KEY="..."
 
-# Lệnh khởi chạy server FastAPI (phải trỏ đúng đường dẫn backend.app.main)
-CMD ["uvicorn", "backend.app.main:app", "--host", "0.0.0.0", "--port", "7860"]
+# Di chuyển vào thư mục backend trước khi chạy để code python nhận diện đúng đường dẫn 'app...'
+WORKDIR /app/backend
+
+# Lệnh khởi chạy server FastAPI (bây giờ chạy từ trong backend)
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7860"]

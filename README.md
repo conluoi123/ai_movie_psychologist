@@ -5,6 +5,8 @@
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector_Database-orange)
 ![Gemini](https://img.shields.io/badge/Google_Gemini-2.5_Flash-green)
 
+**Link test sản phẩm:** [https://huggingface.co/spaces/quoc123kaka/ai-movie-psychologist/tree/main](https://huggingface.co/spaces/quoc123kaka/ai-movie-psychologist/tree/main)
+
 AI Movie Psychologist là một hệ thống Full-stack kết hợp giữa **Generative AI (LLM)**, **Xử lý ngôn ngữ tự nhiên (NLP)** và **Vector Search (RAG)**. Thay vì đề xuất phim theo thể loại cứng nhắc, hệ thống đóng vai trò như một bác sĩ tâm lý: Lắng nghe tâm sự của người dùng, đo lường cảm xúc, và kê một "đơn thuốc" điện ảnh giúp chữa lành hoặc xoa dịu tâm hồn họ.
 
 ---
